@@ -61,9 +61,15 @@ function makeUnderline(elem) {
 
 function alignText(elem, alignType) {
   // CODE GOES HERE
+
+  document.getElementById('text-output').style.textAlign = alignType;
+  let butttonsList = document.getElementsByClassName('align');
+  for (let i = 0; i < butttonsList.length; i++) {
+    butttonsList[i].classList.remove('active');
+  }
+
   elem.classList.toggle('active');
-  document.getElementById("text-output").classList.toggle("align btn btn-light")
-  document.getElementById('text-output')
+  //document.getElementById('text-output')
 }
 
 
