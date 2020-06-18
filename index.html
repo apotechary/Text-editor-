@@ -19,10 +19,12 @@
         <button id="bold" type="button" onclick="makeBold(this)" class="btn btn-light">Bold</button>
         <button id="italic" type="button" onclick="makeItalic(this)" class="btn btn-light">Italic</button>
         <button id="underline" type="button" onclick="makeUnderline(this)" class="btn btn-light">Underline</button>
-        <button id="left-align" type="button" onclick="alignText(this)" class="align btn btn-light"><i
+        <button id="left-align" type="button" onclick="alignText(this, 'left')" class="align btn btn-light left"><i
             class="fas fa-align-left"></i></button>
-        <button id="center-align" type="button" class="align btn btn-light"><i class="fas fa-align-center"></i></button>
-        <button id="right-align" type="button" class="align btn btn-light"><i class="fas fa-align-right"></i></button>
+        <button id="center-align" type="button" onclick="alignText(this, 'right')"
+          class="center align btn btn-light right"><i class="fas fa-align-center"></i></button>
+        <button id="right-align" type="button" onclick="alignText(this,'center')"
+          class="right align btn btn-light center"><i class="fas fa-align-right"></i></button>
       </div>
     </div>
     <hr />
@@ -30,7 +32,7 @@
       <div class="col">
         <div class="form-group">
           <label for="text-input">Your Document Text</label>
-          <textarea class="form-control" id="text-input" onkeypress="updateText()" rows="3"></textarea>
+          <textarea class="form-control" id="text-input" oninput="updateText()" rows="3"></textarea>
         </div>
       </div>
       <div class="col">
